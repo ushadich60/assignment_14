@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <link rel="stylesheet" href="./../style/index.css">
+    <link rel="stylesheet" href="./../style/login.css">
 </head>
 <body>
+
+    <label for="id_username">your username :</label>
+    <input type="text" id="id_username"  placeholder="username"/>
+        <label for="id_paswword">your password :</label>
+    <input type="password" id="id_password" placeholder="password"/>
+
+    <button id="id_login">Login</button>
+    <p id="id_p"></p>
     
+
+
+    <script>
+
+let u1 =document.getElementById("id_username");
+let p2=document.getElementById("id_password");
+let b3 =document.getElementById("id_login");
+let p4 =document.getElementById("id_p");
+
+b3.addEventListener("click",
+
+function check1(){
+    let le_username=u1.value;
+    let le_paswword=p2.value;
+    console.log(le_username);
+    console.log(le_paswword);
+
+try{
+    if(le_username.length<6){
+
+
+        throw new Error("Username must be at least 6 characters.");
+    }
+
+    if(le_paswword.length<10){
+
+        throw new Error("Password must be at least 10 characters.");
+
+    }
+
+    p4.innerText="Authenticated" ;
+    p4.classList.add("nastrue"); 
+    u1.value="";
+        p2.value="";
+}
+catch(errorat1){
+
+console.log(errorat1.message);
+p4.innerText=errorat1.message;
+p4.classList.remove("nastrue"); 
+
+}
+finally{
+
+    console.log("finally");
+
+}
+});
+
+
+
+    </script>
 </body>
 </html>
