@@ -129,6 +129,93 @@ ahaALL();
 
 
 
+// for promise settled
+
+
+
+let AHAprosettled =() =>{
+
+    Promise.allSettled(
+    [aha1(),aha12(),aha331()]
+
+
+
+    ).then(
+
+    function ([val1,val2,val3]){
+        console.log(val1);
+        console.log(val2);
+        console.log(val3);
+        
+       
+    }
+
+    ).catch(
+
+    function (errormessage){
+        console.log(errormessage);
+    }
+
+    ).finally(
+
+    function (){
+
+        console.log("PRomises setteled cAlled");
+    }
+
+    )
+
+
+}
+
+
+
+
+AHAprosettled();
+
+
+
+
+// for race
+
+
+
+
+
+let AharacePro =() =>{
+
+    Promise.race(
+    [aha1(),aha12(),aha331()]
+
+
+
+    ).then(
+
+    function (val1){
+        console.log(val1);
+        
+       
+    }
+
+    ).catch(
+
+    function (errormessage){
+        console.log(errormessage);
+    }
+
+    ).finally(
+
+    function (){
+
+        console.log("PRomises Race cAlled");
+    }
+
+    )
+
+
+}
+AharacePro();
+
 
 </script>
 </body>

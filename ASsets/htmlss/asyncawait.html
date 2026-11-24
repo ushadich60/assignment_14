@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>async_await</title>
+    <link rel=" icon" href="./../icon/faviicon1.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <h1>This is async await</h1>
+
+
+
+
+<script>
+
+
+let Ahapromise =()=>{
+
+
+    return new Promise(
+
+    Fig=(reso,reje)=>{
+
+        setTimeout(
+        FIG2=()=>{
+
+            reso("okayyy after 3 secondes");
+
+        }    
+        ,3000);
+    }
+
+    )
+
+
+};
+
+
+
+let aharesult =async() =>{
+
+console.log("first line in method aharesult");
+
+try{
+
+    const result = await Ahapromise();
+    //   mitil SYNC waited
+    console.log(result);
+}
+catch(erorat){
+    console.log(erorat);
+}
+
+
+console.log("this is 3rd Line hi method aharesult");
+
+};
+
+
+aharesult();
+
+</script>
 </body>
 </html>
