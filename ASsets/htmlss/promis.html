@@ -11,5 +11,60 @@
     
 <h1>this is promises</h1>
 
+
+
+<script>
+
+
+function getdatafromserver_fu(Condition){
+
+return new Promise((resolveeee,rejecttt)=>{
+
+if(Condition){
+
+    resolveeee("DONE");
+
+}
+else{
+    rejecttt("ERRORRRR");
+
+
+}
+
+});
+
+}
+
+
+let Promisi = getdatafromserver_fu(false);
+
+
+Promisi.then(
+(rsp)=>{
+console.log(rsp);
+
+}
+
+
+).catch(
+
+
+(erro1)=>{
+console.log(erro1);
+
+}
+).finally(
+
+()=>{
+console.log("promise called");
+
+}
+
+);
+
+
+
+</script>
+
 </body>
 </html>

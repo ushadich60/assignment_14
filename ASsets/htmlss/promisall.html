@@ -3,9 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" icon" href="./../icon/faviicon1.ico" type="image/x-icon">
     <title>promiseall</title>
+    <link rel="stylesheet" href="./../style/index.css">
 </head>
 <body>
-    
+
+<h1>This is promises all</h1>
+
+
+
+<script>
+
+let  aha1  = ()=>{
+
+    return new Promise(
+
+    (resolvi,reject)=>{
+
+
+        setTimeout(() => {
+              resolvi("okayyyyyy promisi 1");
+              console.log(1);
+
+
+        }, 1000);
+
+      
+
+    }
+
+    );
+
+}
+let  aha12  = ()=>{
+
+    return new Promise(
+
+    (resolvi,reject)=>{
+
+
+        setTimeout(() => {
+              resolvi("okayyyyyy   promisi 12");
+              console.log(2);
+
+              
+        }, 2000);
+
+      
+
+    }
+
+    );
+
+}
+
+
+
+let  aha331  = ()=>{
+
+    return new Promise(
+
+    (resolvi,reject)=>{
+
+
+        setTimeout(() => {
+              reject("FI Error!!!");
+              console.log(3);
+
+              
+        }, 3000);
+
+      
+
+    }
+
+    );
+
+}
+
+
+let ahaALL=()=>{     Promise.all([aha1(),aha12()
+,aha331()
+])
+
+.then(
+
+function([val1,val2,val3]){
+    console.log(val1);
+    console.log(val2);
+    console.log(val3);
+}
+
+).catch(
+
+function (erroriii){
+
+    console.log(erroriii);
+
+}
+
+
+).finally(()=>{
+
+console.log("PromisesAll Called");
+}
+
+)
+;
+
+};
+
+//ahaALL();
+
+
+/*
+aha1();
+aha12();
+aha331();
+*/
+
+
+
+ahaALL();
+
+
+
+
+</script>
 </body>
 </html>
