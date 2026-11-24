@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>set_timeOut</title>
+    <link rel="stylesheet" href="./../style/settimeout.css">
+    <link rel=" icon" href="./../icon/faviicon1.ico" type="image/x-icon">
 </head>
 <body>
-    
+<h1> set timeout</h1>    
+
+<p id="id_hi1">hi THERe </p>
+<button id="id_histop">Stop0</button>
+
+<p id="id_ss"></p>
+<script>
+
+
+const ahapara = document.getElementById("id_hi1");
+
+const ahastopbutton = document.querySelector("#id_histop");
+
+const ahanan = document.getElementById("id_ss");
+
+
+
+let timi =3000;
+
+let rak2  = setTimeout(()=>{
+
+ahapara.classList.add("sizee");
+
+
+},timi);
+
+ahastopbutton.addEventListener("click",()=>{
+
+    clearTimeout(rak2);
+    console.log("Stopped");
+    ahanan.innerText ="stopped ..." ;
+
+});
+
+</script>
 </body>
 </html>

@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asynce</title>
+    <link rel="icon" href="./../icon/faviicon1.ico" type="image/x-icon">
 </head>
 <body>
-    
+  
+
+
+
+ <h1> this is Async</h1>
+
+    <p>line 1</p>
+    <p id="id_par"></p>
+    <p>line 3</p>
+
+<script>
+
+
+const idpar =document.getElementById("id_par");
+
+console.log(`line 1`);
+
+  setTimeout(()=>{
+
+    console.log(`line 2`);
+    idpar.innerText="line 2 after 2 seconds0";
+  },2001) ; 
+
+console.log(`line 3`);
+
+// hon line 2  aata wakit f  min bsbko  fa btsir Asynchornisly
+
+</script>    
 </body>
 </html>
